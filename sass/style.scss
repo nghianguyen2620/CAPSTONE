@@ -1,0 +1,9 @@
+// Import các file scss
+@import "theme/component";
+@import "theme/mixin";
+@import "theme/reset";
+@import "theme/variable";
+
+p {
+  color: red;
+}
