@@ -1,12 +1,326 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
     <title>CAPSTONE</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- animate -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
+
   <body>
-    <p>hello, world!</p>
+    <!-- HEADER -->
+    <header class="py-3">
+      <div class="container">
+        <div class="header-content">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"
+                ><img src="./img/logo-light.svg" alt="logo-light"
+              /></a>
+              <button
+                class="navbar-toggler border-0 p-0 shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="menu collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Pages
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Blog Grid</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Blog Single</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Sign In</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Sign Up</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">404</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                  </li>
+                </ul>
+                <div class="action d-flex align-items-center gap-2">
+                  <img class="xc nm" src="img/icon-moon.svg" alt="Moon" />
+                  <a
+                    href="#"
+                    class="btn-SignIn btn btn-outline-brand d-lg-inline-block"
+                    >Sign In</a
+                  >
+                  <a href="#" class="btn-general btn btn-primary">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div
+          class="hero-content col-6 wow animate__animated animate__fadeInLeft"
+          data-wow-duration="2s"
+        >
+          <h1>We specialize in UI/UX, Web Development, Digital Marketing.</h1>
+          <p class="mt-3 mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            fringilla magna mauris. Nulla fermentum viverra sem eu rhoncus
+            consequat varius nisi quis, posuere magna.
+          </p>
+          <div class="action d-flex align-items-center">
+            <button class="btn btn-general me-3 d-block my-0">
+              Get Started Now
+            </button>
+            <p class="mb-0">
+              <span>Call us (0123) 456 – 789</span><br />
+              For any question or concern
+            </p>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./img/shape-04.svg" alt="shape-04" />
+          <img src="./img/hero.png" alt="women" />
+          <img src="./img/shape-01.svg" alt="shape-04" />
+          <img src="./img/shape-02.svg" alt="shape-04" />
+          <img src="./img/shape-03.svg" alt="shape-04" />
+        </div>
+      </div>
+    </section>
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="container">
+        <div class="features-content d-flex align-items-center">
+          <div
+            class="features-item col-4 d-flex align-items-center wow animate__animated animate__fadeInDown"
+            data-wow-duration="2s"
+            data-wow-delay="0.1s"
+          >
+            <div class="ft-image ft-image1 me-4">
+              <img src="./img/icon-01.svg" alt="" />
+            </div>
+            <div>
+              <h4 class="title-h4">24/7 Support</h4>
+              <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+            </div>
+          </div>
+          <div
+            class="features-item col-4 d-flex align-items-center wow animate__animated animate__fadeInDown"
+            data-wow-duration="2s"
+            data-wow-delay="0.3s"
+          >
+            <div class="ft-image ft-image2 me-4">
+              <img src="./img/icon-02.svg" alt="" />
+            </div>
+            <div>
+              <h4 class="title-h4">Take Ownership</h4>
+              <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+            </div>
+          </div>
+          <div
+            class="features-item col-4 d-flex align-items-center wow animate__animated animate__fadeInDown"
+            data-wow-duration="2s"
+            data-wow-delay="0.5s"
+          >
+            <div class="ft-image ft-image3 me-4">
+              <img src="./img/icon-03.svg" alt="" />
+            </div>
+            <div>
+              <h4 class="title-h4">Team Work</h4>
+              <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section class="about">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div
+          class="about-image col-6 d-flex wow animate__animated animate__fadeInLeft"
+          data-wow-duration="2s"
+          data-wow-delay="0.5s"
+        >
+          <div class="about-image1 col-6">
+            <img src="./img/about-01.png" alt="" />
+            <img src="./img/about-02.png" alt="" />
+            <img src="./img/shape-05.svg" alt="" />
+          </div>
+          <div
+            class="about-image2 d-flex flex-column justify-content-between align-items-start"
+          >
+            <img src="./img/shape-06.svg" alt="" />
+            <img src="./img/about-03.png" alt="" />
+            <img src="./img/shape-07.svg" alt="" />
+          </div>
+        </div>
+        <div
+          class="about-content col-5 wow animate__animated animate__fadeInRight"
+          data-wow-duration="2s"
+          data-wow-delay="0.5s"
+        >
+          <h4 class="mb-4">Why Choose Us</h4>
+          <h2 class="title">
+            We Make Our customers happy by giving Best services.
+          </h2>
+          <p class="mt-3 mb-5">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum.
+          </p>
+          <a href="" data-bs-toggle="modal" data-bs-target="#videoModal">
+            <span class="btn-general btn-play"
+              ><img src="./img/icon-play.svg" alt=""
+            /></span>
+            <span>SEE HOW WE WORK</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- TEAM -->
+    <section class="team">
+      <div class="bgcl-team"></div>
+      <img class="bg-team" src="./img/shape-08.svg" alt="" />
+      <img class="shape-09" src="./img/shape-09.svg" alt="" />
+      <img class="shape-10" src="./img/shape-10.svg" alt="" />
+      <img class="shape-11" src="./img/shape-11.svg" alt="" />
+
+      <div class="container">
+        <div class="team-content">
+          <h2 class="title">Meet With Our Creative<br />Dedicated Team</h2>
+          <p class="mt-3 mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+            convallis tortor eros.<br />
+            Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+          </p>
+          <div class="team-group d-flex justify-content-around">
+            <div class="team-item">
+              <img src="./img/team-01.png" alt="" />
+              <h4 class="mt-3">Olivia Andrium</h4>
+              <p>Product Manager</p>
+            </div>
+            <div class="team-item">
+              <img src="./img/team-02.png" alt="" />
+              <h4 class="mt-3">Jemse Kemorun</h4>
+              <p>Product Designer</p>
+            </div>
+            <div class="team-item">
+              <img src="./img/team-03.png" alt="" />
+              <h4 class="mt-3">Avi Pestarica</h4>
+              <p>Web Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-header border-0 justify-content-end p-0 mb-3">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="youtubeVideo"
+                src="https://www.youtube.com/embed/xcJtL7QggTI"
+                title="YouTube video"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const videoModal = document.getElementById("videoModal");
+      const youtubeVideo = document.getElementById("youtubeVideo");
+      const videoSrc = youtubeVideo.src;
+      videoModal.addEventListener("hide.bs.modal", function () {
+        youtubeVideo.src = videoSrc;
+      });
+    </script>
+    <!-- wow -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      new WOW().init();
+    </script>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

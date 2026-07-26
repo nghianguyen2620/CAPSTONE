@@ -1,8 +1,278 @@
+@charset "UTF-8";
+:root {
+  --animate-duration: 2s;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-  color: red;
+body {
+  font-family: "Inter", sans-serif;
+  color: #79808a;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-general {
+  padding: 12px 30px;
+  border-radius: 50px;
+  background-color: #4e6bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.btn-general:hover {
+  background-color: #4e6bff;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.title {
+  color: #181c31;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.title-h4 {
+  color: #181c31;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+header .container .header-content .navbar .container-fluid .navbar-toggler .navbar-toggler-icon {
+  transition: all 1s;
+}
+header .container .header-content .navbar .container-fluid {
+  /* Trạng thái Menu mở - Đổi thành dấu X (dùng mã SVG inline) */
+}
+header .container .header-content .navbar .container-fluid .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23090E34'%3e%3cpath fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/%3e%3cpath fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/%3e%3c/svg%3e");
+}
+header .container .header-content .navbar .container-fluid .menu ul li {
+  margin: 0 15px;
+}
+header .container .header-content .navbar .container-fluid .menu ul li a {
+  color: #79808a;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+header .container .header-content .navbar .container-fluid .menu ul li a:hover, header .container .header-content .navbar .container-fluid .menu ul li a.active {
+  color: #4e6bff;
+}
+header .container .header-content .navbar .container-fluid .action a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  background: #4e6bff;
+}
+
+.hero {
+  padding-top: 100px;
+}
+.hero .container .hero-content h1 {
+  color: #181c31;
+  font-size: 50px;
+  font-weight: 600;
+}
+.hero .container .hero-content .action p span {
+  color: #181c31;
+  font-size: 18px;
+  font-weight: 500;
+}
+.hero .container .hero-image img:nth-child(1),
+.hero .container .hero-image img:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.hero .container .hero-image img:nth-child(3) {
+  position: absolute;
+  right: 700px;
+  top: 300px;
+}
+.hero .container .hero-image img:nth-child(4) {
+  position: absolute;
+  right: 150px;
+  top: 600px;
+}
+.hero .container .hero-image img:nth-child(5) {
+  position: absolute;
+  right: 550px;
+  top: 580px;
+}
+
+.features {
+  margin-top: 250px;
+}
+.features .container .features-content .features-item .ft-image {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features .container .features-content .features-item .ft-image1 {
+  background-color: #f36a8d;
+}
+.features .container .features-content .features-item .ft-image2 {
+  background-color: #20ca66;
+}
+.features .container .features-content .features-item .ft-image3 {
+  background-color: #fa9161;
+}
+
+.about {
+  margin-top: 100px;
+}
+.about .container .about-image .about-image1 {
+  position: relative;
+}
+.about .container .about-image .about-image1 img:nth-child(1) {
+  margin-bottom: 30px;
+}
+.about .container .about-image .about-image1 img:nth-child(3) {
+  position: absolute;
+  left: -20px;
+  top: 19px;
+}
+.about .container .about-image .about-image2 img:last-of-type {
+  margin-left: 50px;
+}
+.about .container .about-content h4 {
+  color: #4e6bff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.about .container .about-content a {
+  display: flex;
+  align-items: center;
+}
+.about .container .about-content a .btn-play {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+.about .container .about-content a .btn-play:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4e6bff;
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse-ring 1s infinite;
+}
+.about .container .about-content a span:nth-child(2) {
+  color: #181c31;
+}
+
+.team {
+  margin-top: 100px;
+  padding-top: 100px;
+  position: relative;
+}
+.team .bgcl-team {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 566px;
+  background: #f4f7fa;
+  z-index: -1;
+}
+.team .bg-team {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.team .shape-09 {
+  position: absolute;
+  top: 450px;
+  left: 150px;
+  z-index: -1;
+  animation: spinTriangle 15s linear infinite alternate;
+}
+.team .shape-10 {
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  z-index: -1;
+}
+.team .shape-11 {
+  position: absolute;
+  top: 150px;
+  right: 300px;
+  z-index: -1;
+  animation: spinTriangle 15s linear infinite alternate;
+}
+.team .container .team-content {
+  text-align: center;
+}
+.team .container .team-content .team-group .team-item h4 {
+  color: #181c31;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+  .navbar .dropdown-menu {
+    display: none;
+    animation: fadeDropdown 0.3s ease forwards;
+    border: none;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+  }
+}
+@keyframes fadeDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes spinTriangle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */

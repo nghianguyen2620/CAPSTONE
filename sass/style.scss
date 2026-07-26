@@ -1,9 +1,288 @@
 // Import các file scss
-@import "theme/component";
+@import "theme/variables";
 @import "theme/mixin";
+@import "theme/components";
 @import "theme/reset";
-@import "theme/variable";
 
-p {
-  color: red;
+.btn-general {
+  @include styleBtn(#fff, #4e6bff, #fff, #4e6bff);
+}
+.title {
+  @include styleText($text-h2, $fw-h2, $text-heading-light);
+}
+.title-h4 {
+  @include styleText($text-h4, $fw-h4, $text-heading-light);
+}
+
+header {
+  .container {
+    .header-content {
+      .navbar {
+        .container-fluid {
+          .navbar-toggler {
+            .navbar-toggler-icon {
+              transition: all 1s;
+            }
+          }
+          /* Trạng thái Menu mở - Đổi thành dấu X (dùng mã SVG inline) */
+          .navbar-toggler[aria-expanded="true"] {
+            .navbar-toggler-icon {
+              background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23090E34'%3e%3cpath fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/%3e%3cpath fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/%3e%3c/svg%3e");
+            }
+          }
+          .menu {
+            ul {
+              li {
+                margin: 0 15px;
+                a {
+                  @include styleText($text-base, 500, $text-primary);
+                  transition: all 0.5s;
+                  &:hover,
+                  &.active {
+                    color: #4e6bff;
+                  }
+                }
+              }
+            }
+          }
+          .action {
+            a {
+              @include styleText($text-base, 500, #fff);
+              background: #4e6bff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  padding-top: 100px;
+  .container {
+    .hero-content {
+      h1 {
+        @include styleText(50px, 600, $text-heading-light);
+      }
+      .action {
+        p {
+          span {
+            @include styleText(18px, 500, $text-heading-light);
+          }
+        }
+      }
+    }
+    .hero-image {
+      img:nth-child(1),
+      img:nth-child(2) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+      }
+      img:nth-child(3) {
+        position: absolute;
+        right: 700px;
+        top: 300px;
+      }
+      img:nth-child(4) {
+        position: absolute;
+        right: 150px;
+        top: 600px;
+      }
+      img:nth-child(5) {
+        position: absolute;
+        right: 550px;
+        top: 580px;
+      }
+    }
+  }
+}
+
+.features {
+  margin-top: 250px;
+  .container {
+    .features-content {
+      .features-item {
+        .ft-image {
+          width: 84px;
+          height: 84px;
+          border-radius: 50%;
+
+          flex-shrink: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .ft-image1 {
+          background-color: #f36a8d;
+        }
+        .ft-image2 {
+          background-color: #20ca66;
+        }
+        .ft-image3 {
+          background-color: #fa9161;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  margin-top: 100px;
+  .container {
+    .about-image {
+      .about-image1 {
+        position: relative;
+        img:nth-child(1) {
+          margin-bottom: 30px;
+        }
+        img:nth-child(3) {
+          position: absolute;
+          left: -20px;
+          top: 19px;
+        }
+      }
+      .about-image2 {
+        img:last-of-type {
+          margin-left: 50px;
+        }
+      }
+    }
+    .about-content {
+      h4 {
+        @include styleText(20px, $fw-h4, #4e6bff);
+      }
+      a {
+        display: flex;
+        align-items: center;
+        .btn-play {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 20px;
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #4e6bff;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse-ring 1s infinite;
+          }
+        }
+        span:nth-child(2) {
+          color: $text-heading-light;
+        }
+      }
+    }
+  }
+}
+
+.team {
+  margin-top: 100px;
+  padding-top: 100px;
+  position: relative;
+  .bgcl-team {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 566px;
+    background: #f4f7fa;
+    z-index: -1;
+  }
+  .bg-team {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .shape-09 {
+    position: absolute;
+    top: 450px;
+    left: 150px;
+    z-index: -1;
+    animation: spinTriangle 15s linear infinite alternate;
+  }
+  .shape-10 {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    z-index: -1;
+  }
+  .shape-11 {
+    position: absolute;
+    top: 150px;
+    right: 300px;
+    z-index: -1;
+    animation: spinTriangle 15s linear infinite alternate;
+  }
+  .container {
+    .team-content {
+      text-align: center;
+
+      .team-group {
+        .team-item {
+          h4 {
+            @include styleText($text-h4, 400, $text-heading-light);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  .navbar .dropdown-menu {
+    display: none;
+    animation: fadeDropdown 0.3s ease forwards;
+    border: none;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+  }
+}
+
+@keyframes fadeDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes spinTriangle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

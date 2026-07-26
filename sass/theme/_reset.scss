@@ -1,4 +1,16 @@
+:root {
+  --animate-duration: 2s;
+}
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  // khi chỉnh width thì tính luôn padding và border
+}
+body {
+  font-family: "Inter", sans-serif;
+  @include styleText($text-base, $fw-base, $text-primary);
+}
+a {
+  text-decoration: none;
 }
