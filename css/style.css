@@ -24,6 +24,7 @@ a {
   padding: 10px 30px;
   border-radius: 50px;
   background-color: #4e6bff;
+  border: none;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -47,6 +48,19 @@ a {
   font-weight: 500;
 }
 
+header.scrolled {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(206, 203, 203, 0.2392156863);
+}
+header.scrolled .container .header-content .navbar .container-fluid .action a:nth-of-type(1),
+header.scrolled .container .header-content .navbar .container-fluid .action a:nth-of-type(2) {
+  color: #79808a;
+  font-size: 16px;
+  font-weight: 500;
+}
+header.scrolled .container .header-content .navbar .container-fluid .action .btn-general {
+  background-color: #4e6bff;
+}
 header .container .header-content .navbar .container-fluid .navbar-toggler .navbar-toggler-icon {
   transition: all 1s;
 }
@@ -72,7 +86,9 @@ header .container .header-content .navbar .container-fluid .action a {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-  background: #4e6bff;
+}
+header .container .header-content .navbar .container-fluid .action .btn-general {
+  background-color: #6881ff;
 }
 
 .hero {
@@ -365,6 +381,7 @@ header .container .header-content .navbar .container-fluid .action a {
   box-shadow: none;
   width: 40px;
   height: 20px;
+  cursor: pointer;
 }
 .price .price-content .price-group .price-item {
   padding: 20px 100px;
@@ -394,6 +411,7 @@ header .container .header-content .navbar .container-fluid .action a {
   padding: 10px 30px;
   border-radius: 50px;
   background-color: #f36a8d;
+  border: none;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -411,6 +429,7 @@ header .container .header-content .navbar .container-fluid .action a {
   padding: 10px 30px;
   border-radius: 50px;
   background-color: #4e6bff;
+  border: none;
   color: #fff;
   font-size: 16px;
   font-weight: 500;

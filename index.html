@@ -22,6 +22,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,7 +44,7 @@
 
   <body>
     <!-- HEADER -->
-    <header class="py-3">
+    <header class="py-1 fixed-top">
       <div class="container">
         <div class="header-content">
           <nav class="navbar navbar-expand-lg">
@@ -100,7 +104,7 @@
                   </li>
                 </ul>
                 <div class="action d-flex align-items-center gap-2">
-                  <img class="xc nm" src="img/icon-moon.svg" alt="Moon" />
+                  <a href="#"><img src="img/icon-moon.svg" alt="Moon" /></a>
                   <a
                     href="#"
                     class="btn-SignIn btn btn-outline-brand d-lg-inline-block"
@@ -559,6 +563,18 @@
       const videoSrc = youtubeVideo.src;
       videoModal.addEventListener("hide.bs.modal", function () {
         youtubeVideo.src = videoSrc;
+      });
+    </script>
+    <!-- header -->
+    <script>
+      const header = document.querySelector("header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 0) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
       });
     </script>
     <!-- wow -->

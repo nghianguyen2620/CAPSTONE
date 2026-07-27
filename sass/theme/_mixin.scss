@@ -7,6 +7,7 @@
   padding: 10px 30px;
   border-radius: 50px;
   background-color: $bg;
+  border: none;
   @include styleText($text-base, 500, $color);
   transition: all 0.5s;
   &:hover {
