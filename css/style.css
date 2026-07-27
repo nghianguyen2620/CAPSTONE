@@ -21,7 +21,7 @@ a {
 }
 
 .btn-general {
-  padding: 12px 30px;
+  padding: 10px 30px;
   border-radius: 50px;
   background-color: #4e6bff;
   color: #fff;
@@ -284,6 +284,142 @@ header .container .header-content .navbar .container-fluid .action a {
   color: #181c31;
   font-size: 26px;
   font-weight: 400;
+}
+
+.services {
+  margin-top: 100px;
+}
+.services .service-item {
+  transition: 0.5s;
+}
+.services .service-item:hover {
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.price {
+  margin-top: 100px;
+  padding: 100px;
+  position: relative;
+}
+.price .bgcl-team {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  background: #f4f7fa;
+  z-index: -1;
+}
+.price .bg-team {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.price .shape-06 {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  z-index: -1;
+}
+.price .shape-03 {
+  position: absolute;
+  top: 230px;
+  right: 400px;
+  z-index: -1;
+}
+.price .shape-07 {
+  position: absolute;
+  width: 100px;
+  bottom: 100px;
+  right: 150px;
+  z-index: -1;
+}
+.price .shape-12 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.price .shape-13 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.price .price-content:has(#bill-my:checked) .price-group .price-item .price-month .month {
+  display: none;
+}
+.price .price-content:has(#bill-my:checked) .price-group .price-item .price-month .year {
+  display: inline;
+}
+.price .price-content .bill p {
+  margin-bottom: 0;
+  color: #181c31;
+}
+.price .price-content .bill .form-switch .form-check-input,
+.price .price-content .bill .form-switch .form-check-input:checked {
+  background-color: #4e6bff;
+  border-color: #4e6bff;
+  box-shadow: none;
+  width: 40px;
+  height: 20px;
+}
+.price .price-content .price-group .price-item {
+  padding: 20px 100px;
+  background-color: #fff;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 10px;
+}
+.price .price-content .price-group .price-item h4 {
+  color: #181c31;
+  font-size: 26px;
+  font-weight: 400;
+}
+.price .price-content .price-group .price-item .price-month .year {
+  display: none;
+}
+.price .price-content .price-group .price-item .price-month h2 {
+  color: #181c31;
+  font-size: 40px;
+  font-weight: 600;
+}
+.price .price-content .price-group .price-item .price-month p {
+  color: #181c31;
+}
+.price .price-content .price-group .price-item button {
+  width: 200px;
+  padding: 12px 30px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #f36a8d;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.price .price-content .price-group .price-item button:hover {
+  background-color: #4e6bff;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.price .price-content .price-group .price-item p:last-child {
+  color: #181c31;
+}
+.price .price-content .price-group .price-item:nth-child(2) button {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #4e6bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.price .price-content .price-group .price-item:nth-child(2) button:hover {
+  background-color: #f36a8d;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 @media (min-width: 992px) {
