@@ -453,7 +453,7 @@
             class="price-group mt-4 d-flex justify-content-center align-items-center gap-5"
           >
             <div
-              class="price-item wow animate__animated animate__fadeInDown"
+              class="price-item col-4 wow animate__animated animate__fadeInDown"
               data-wow-duration="2s"
               data-wow-delay="0.5s"
             >
@@ -475,7 +475,7 @@
               <p class="my-5">7-day free trial</p>
             </div>
             <div
-              class="price-item wow animate__animated animate__fadeInDown"
+              class="price-item col-4 wow animate__animated animate__fadeInDown"
               data-wow-duration="2s"
               data-wow-delay="0.6s"
             >
@@ -497,7 +497,7 @@
               <p class="my-5">7-day free trial</p>
             </div>
             <div
-              class="price-item wow animate__animated animate__fadeInDown"
+              class="price-item col-4 wow animate__animated animate__fadeInDown"
               data-wow-duration="2s"
               data-wow-delay="0.7s"
             >
@@ -557,6 +557,986 @@
         </div>
       </div>
     </div>
+    <!-- PORTFOLIO -->
+    <section class="portfolio py-5">
+      <div class="container">
+        <!-- Heading -->
+        <div class="text-center mb-5">
+          <h2 class="title wow animate__animated animate__fadeInDown">
+            We Offer Great Affordable <br />
+            Premium Prices.
+          </h2>
+          <p class="text-secondary mt-3">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
+          </p>
+        </div>
+
+        <!-- Filter -->
+        <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+          <input
+            type="radio"
+            class="btn-check"
+            name="portfolio"
+            id="all"
+            data-filter="all"
+            checked
+          />
+          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="all"
+            >All</label
+          >
+
+          <input
+            type="radio"
+            class="btn-check"
+            name="portfolio"
+            id="branding"
+            data-filter="branding"
+          />
+          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="branding"
+            >Branding Strategy</label
+          >
+
+          <input
+            type="radio"
+            class="btn-check"
+            name="portfolio"
+            id="digital"
+            data-filter="digital"
+          />
+          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="digital"
+            >Digital Experiences</label
+          >
+
+          <input
+            type="radio"
+            class="btn-check"
+            name="portfolio"
+            id="ecommerce"
+            data-filter="ecommerce"
+          />
+          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="ecommerce"
+            >Ecommerce</label
+          >
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="row g-4">
+              <div class="col-md-6 portfolio-item branding ecommerce">
+                <img
+                  src="./img/project-01.png"
+                  class="img-fluid rounded-4 w-100"
+                  alt=""
+                />
+              </div>
+
+              <div class="col-md-6 portfolio-item digital ecommerce">
+                <img
+                  src="./img/project-02.png"
+                  class="img-fluid rounded-4 w-100"
+                  alt=""
+                />
+              </div>
+
+              <div class="col-12 portfolio-item digital">
+                <img
+                  src="./img/project-03.png"
+                  class="img-fluid rounded-4 w-100"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 portfolio-item branding">
+            <img
+              src="./img/project-04.png"
+              class="img-fluid rounded-4 h-100 w-100 object-fit-cover"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const filters = document.querySelectorAll('input[name="portfolio"]');
+        const items = document.querySelectorAll(".portfolio-item");
+
+        filters.forEach((filter) => {
+          filter.addEventListener("change", () => {
+            const category = filter.dataset.filter;
+
+            items.forEach((item) => {
+              item.style.display =
+                category === "all" || item.classList.contains(category)
+                  ? ""
+                  : "none";
+            });
+          });
+        });
+      });
+    </script>
+    <!-- TESTIMONIAL -->
+    <section class="testimonial py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2
+            class="title wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.2s"
+          >
+            Client's Testimonials
+          </h2>
+
+          <p
+            class="text-secondary mt-3 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.4s"
+          >
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
+          </p>
+        </div>
+
+        <div
+          id="testimonialCarousel"
+          class="carousel slide wow animate__animated animate__fadeInDown"
+          data-wow-duration="1s"
+          data-wow-delay="0.6s"
+          data-bs-ride="false"
+        >
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div
+                class="card border-0 shadow-lg testimonial-card position-relative"
+              >
+                <div class="row g-0 align-items-center">
+                  <div class="col-lg-4 p-5">
+                    <img
+                      src="./img/testimonial.png"
+                      class="img-fluid rounded-3 w-100"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="col-lg-8 p-5">
+                    <img
+                      src="./img/icon-quote.svg"
+                      width="70"
+                      class="mb-4"
+                      alt=""
+                    />
+
+                    <p class="testimonial-text mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In dolor diam, feugiat quis enim sed, ullamcorper semper
+                      ligula. Mauris consequat justo volutpat.
+                    </p>
+
+                    <div
+                      class="d-flex justify-content-between align-items-end flex-wrap"
+                    >
+                      <div>
+                        <h4 class="mb-2">David Smith</h4>
+
+                        <p class="mb-0 text-secondary">Founder @democompany</p>
+                      </div>
+
+                      <img
+                        src="./img/brand-light-02.svg"
+                        style="height: 38px"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <span class="bar-blue"></span>
+                <span class="bar-pink"></span>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div
+                class="card border-0 shadow-lg testimonial-card position-relative"
+              >
+                <div class="row g-0 align-items-center">
+                  <div class="col-lg-4 p-5">
+                    <img
+                      src="./img/testimonial.png"
+                      class="img-fluid rounded-3 w-100"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="col-lg-8 p-5">
+                    <img
+                      src="./img/icon-quote.svg"
+                      width="70"
+                      class="mb-4"
+                      alt=""
+                    />
+
+                    <p class="testimonial-text mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In dolor diam, feugiat quis enim sed, ullamcorper semper
+                      ligula. Mauris consequat justo volutpat.
+                    </p>
+
+                    <div
+                      class="d-flex justify-content-between align-items-end flex-wrap"
+                    >
+                      <div>
+                        <h4 class="mb-2">David Smith</h4>
+
+                        <p class="mb-0 text-secondary">Founder @democompany</p>
+                      </div>
+
+                      <img
+                        src="./img/brand-light-02.svg"
+                        style="height: 38px"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <span class="bar-blue"></span>
+                <span class="bar-pink"></span>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div
+                class="card border-0 shadow-lg testimonial-card position-relative"
+              >
+                <div class="row g-0 align-items-center">
+                  <div class="col-lg-4 p-5">
+                    <img
+                      src="./img/testimonial.png"
+                      class="img-fluid rounded-3 w-100"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="col-lg-8 p-5">
+                    <img
+                      src="./img/icon-quote.svg"
+                      width="70"
+                      class="mb-4"
+                      alt=""
+                    />
+
+                    <p class="testimonial-text mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In dolor diam, feugiat quis enim sed, ullamcorper semper
+                      ligula. Mauris consequat justo volutpat.
+                    </p>
+
+                    <div
+                      class="d-flex justify-content-between align-items-end flex-wrap"
+                    >
+                      <div>
+                        <h4 class="mb-2">David Smith</h4>
+
+                        <p class="mb-0 text-secondary">Founder @democompany</p>
+                      </div>
+
+                      <img
+                        src="./img/brand-light-02.svg"
+                        style="height: 38px"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <span class="bar-blue"></span>
+                <span class="bar-pink"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <button
+              class="btn rounded-circle me-2 nav-btn"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev"
+            >
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <button
+              class="btn rounded-circle nav-btn"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="next"
+            >
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- COUNTER -->
+    <section class="counter py-5 position-relative">
+      <img src="./img/shape-11.svg" class="shape shape-11" alt="" />
+      <img src="./img/shape-07.svg" class="shape shape-07" alt="" />
+      <img src="./img/shape-14.svg" class="shape shape-14" alt="" />
+      <img src="./img/shape-15.svg" class="shape shape-15" alt="" />
+
+      <div class="container">
+        <div class="row text-center gy-5">
+          <div
+            class="col-6 col-lg-3 wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.2s"
+          >
+            <h2 class="display-4 fw-bold mb-3 counter-number">785</h2>
+            <p class="text-secondary mb-0">Global Brands</p>
+          </div>
+
+          <div
+            class="col-6 col-lg-3 wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.4s"
+          >
+            <h2 class="display-4 fw-bold mb-3 counter-number">533</h2>
+            <p class="text-secondary mb-0">Happy Clients</p>
+          </div>
+
+          <div
+            class="col-6 col-lg-3 wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.6s"
+          >
+            <h2 class="display-4 fw-bold mb-3 counter-number">865</h2>
+            <p class="text-secondary mb-0">Winning Awards</p>
+          </div>
+
+          <div
+            class="col-6 col-lg-3 wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.8s"
+          >
+            <h2 class="display-4 fw-bold mb-3 counter-number">346</h2>
+            <p class="text-secondary mb-0">Completed Projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BRANDS -->
+    <section class="brands py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2
+            class="title wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.2s"
+          >
+            Trusted by Global Brands
+          </h2>
+
+          <p
+            class="text-secondary mt-3 wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.4s"
+          >
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
+          </p>
+        </div>
+
+        <div class="row g-5 justify-content-center align-items-center">
+          <div
+            class="col-6 col-md-4 col-lg-2 text-center wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.6s"
+          >
+            <img
+              src="./img/brand-light-01.svg"
+              class="img-fluid brand-logo"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="col-6 col-md-4 col-lg-2 text-center wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.7s"
+          >
+            <img
+              src="./img/brand-light-02.svg"
+              class="img-fluid brand-logo"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="col-6 col-md-4 col-lg-2 text-center wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.8s"
+          >
+            <img
+              src="./img/brand-light-03.svg"
+              class="img-fluid brand-logo"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="col-6 col-md-4 col-lg-2 text-center wow animate__animated animate__fadeInDown"
+            data-wow-delay="0.9s"
+          >
+            <img
+              src="./img/brand-light-04.svg"
+              class="img-fluid brand-logo"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="col-6 col-md-4 col-lg-2 text-center wow animate__animated animate__fadeInDown"
+            data-wow-delay="1s"
+          >
+            <img
+              src="./img/brand-light-05.svg"
+              class="img-fluid brand-logo"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="col-6 col-md-4 col-lg-2 text-center wow animate__animated animate__fadeInDown"
+            data-wow-delay="1.1s"
+          >
+            <img
+              src="./img/brand-light-06.svg"
+              class="img-fluid brand-logo"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BLOG -->
+    <section class="blog py-5">
+      <div class="container">
+        <!-- Heading -->
+        <div class="text-center mb-5">
+          <h2
+            class="title wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.2s"
+          >
+            Latest Blogs & News
+          </h2>
+
+          <p
+            class="text-secondary mt-3 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.4s"
+          >
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Blog 1 -->
+          <div
+            class="col-lg-4 col-md-6 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.6s"
+          >
+            <div class="card border-0 shadow-sm blog-card h-100">
+              <div class="blog-image">
+                <img src="./img/blog-01.png" class="card-img-top" alt="Blog" />
+
+                <div class="blog-overlay">
+                  <a href="#" class="btn btn-primary"> Read More </a>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div class="d-flex text-secondary small mb-3">
+                  <div class="me-4">
+                    <i class="fa-solid fa-user me-2"></i>
+                    Musharof Chy
+                  </div>
+
+                  <div>
+                    <i class="fa-solid fa-calendar me-2"></i>
+                    Dec 25, 2025
+                  </div>
+                </div>
+
+                <h4 class="card-title">
+                  Free advertising for your online business
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 2 -->
+          <div
+            class="col-lg-4 col-md-6 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.8s"
+          >
+            <div class="card border-0 shadow-sm blog-card h-100">
+              <div class="blog-image">
+                <img src="./img/blog-02.png" class="card-img-top" alt="Blog" />
+
+                <div class="blog-overlay">
+                  <a href="#" class="btn btn-primary"> Read More </a>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div class="d-flex text-secondary small mb-3">
+                  <div class="me-4">
+                    <i class="fa-solid fa-user me-2"></i>
+                    Musharof Chy
+                  </div>
+
+                  <div>
+                    <i class="fa-solid fa-calendar me-2"></i>
+                    Dec 25, 2025
+                  </div>
+                </div>
+
+                <h4 class="card-title">
+                  9 Simple Ways to Improve Your Design Skills
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog 3 -->
+          <div
+            class="col-lg-4 col-md-6 mx-md-auto wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
+            <div class="card border-0 shadow-sm blog-card h-100">
+              <div class="blog-image">
+                <img src="./img/blog-03.png" class="card-img-top" alt="Blog" />
+
+                <div class="blog-overlay">
+                  <a href="#" class="btn btn-primary"> Read More </a>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div class="d-flex text-secondary small mb-3">
+                  <div class="me-4">
+                    <i class="fa-solid fa-user me-2"></i>
+                    Musharof Chy
+                  </div>
+
+                  <div>
+                    <i class="fa-solid fa-calendar me-2"></i>
+                    Dec 25, 2025
+                  </div>
+                </div>
+
+                <h4 class="card-title">
+                  Tips to Quickly Improve Your Coding Speed
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="support" class="contact py-5 position-relative">
+      <img
+        src="./img/shape-06.svg"
+        class="shape shape-06 wow animate__animated animate__fadeInDown"
+        data-wow-delay="0.2s"
+        alt=""
+      />
+
+      <img
+        src="./img/shape-07.svg"
+        class="shape shape-07 wow animate__animated animate__fadeInDown"
+        data-wow-delay="0.3s"
+        alt=""
+      />
+
+      <img
+        src="./img/shape-12.svg"
+        class="shape shape-12 wow animate__animated animate__fadeInDown"
+        data-wow-delay="0.4s"
+        alt=""
+      />
+
+      <img
+        src="./img/shape-13.svg"
+        class="shape shape-13 wow animate__animated animate__fadeInDown"
+        data-wow-delay="0.5s"
+        alt=""
+      />
+
+      <div class="container">
+        <!-- Heading -->
+        <div class="text-center mb-5">
+          <h2
+            class="title wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.2s"
+          >
+            Let's Stay Connected
+          </h2>
+
+          <p
+            class="text-secondary mt-3 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.4s"
+          >
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
+          </p>
+        </div>
+
+        <img
+          src="./img/shape-03.svg"
+          class="shape-03-1 wow animate__animated animate__fadeInDown"
+          data-wow-delay="0.6s"
+          alt="shape-03"
+        />
+
+        <div class="row g-4">
+          <!-- Left Card -->
+          <div
+            class="col-lg-4 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.6s"
+          >
+            <div class="card border-0 shadow h-100 p-4">
+              <p>
+                <img src="./img/shape-03.svg" class="shape-03-2" alt="" />
+              </p>
+
+              <h4>Email Address</h4>
+              <p>support@startup.com</p>
+
+              <br />
+
+              <h4>Office Location</h4>
+              <p>76/A, Green Valley, California USA.</p>
+
+              <br />
+
+              <h4>Phone Number</h4>
+              <p>+009 8754 3433 223</p>
+
+              <br />
+
+              <h4>Skype Email</h4>
+              <p>example@yourmail.com</p>
+
+              <br />
+
+              <h4 class="mb-3">Social Media</h4>
+
+              <div class="d-flex gap-3">
+                <a href="#" class="social-icon">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                  <i class="fab fa-behance"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card -->
+          <div
+            class="col-lg-8 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.8s"
+          >
+            <div class="card border-0 shadow p-4">
+              <form>
+                <div class="row">
+                  <div
+                    class="col-md-6 mb-4 wow animate__animated animate__fadeInDown"
+                    data-wow-delay="1s"
+                  >
+                    <label class="form-label"> Full Name </label>
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="David Wonder"
+                    />
+                  </div>
+
+                  <div
+                    class="col-md-6 mb-4 wow animate__animated animate__fadeInDown"
+                    data-wow-delay="1.1s"
+                  >
+                    <label class="form-label"> Email Address </label>
+
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="example@gmail.com"
+                    />
+                  </div>
+
+                  <div
+                    class="col-md-6 mb-4 wow animate__animated animate__fadeInDown"
+                    data-wow-delay="1.2s"
+                  >
+                    <label class="form-label"> Phone Number </label>
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="+009 3342 3432"
+                    />
+                  </div>
+
+                  <div
+                    class="col-md-6 mb-4 wow animate__animated animate__fadeInDown"
+                    data-wow-delay="1.3s"
+                  >
+                    <label class="form-label"> Subject </label>
+
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Type your subject"
+                    />
+                  </div>
+
+                  <div
+                    class="col-12 mb-4 wow animate__animated animate__fadeInDown"
+                    data-wow-delay="1.4s"
+                  >
+                    <label class="form-label"> Message </label>
+
+                    <textarea
+                      rows="6"
+                      class="form-control"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+
+                  <div
+                    class="col-12 text-center wow animate__animated animate__fadeInDown"
+                    data-wow-delay="1.5s"
+                  >
+                    <button class="btn btn-primary px-5 py-3 rounded-pill">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA -->
+    <section class="cta py-5 bg-primary text-white position-relative">
+      <img
+        src="./img/shape-16.svg"
+        class="position-absolute bottom-0 end-0 h-100 wow animate__animated animate__fadeInLeft"
+        data-wow-duration="1s"
+        data-wow-delay="0.2s"
+        alt=""
+      />
+
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <!-- Left -->
+          <div
+            class="col-lg-8 wow animate__animated animate__fadeInLeft"
+            data-wow-duration="1s"
+            data-wow-delay="0.2s"
+          >
+            <h2 class="display-5 fw-bold">
+              Join with 5000+ Startups
+              <br />
+              Growing with Base.
+            </h2>
+
+            <p class="mt-4 mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
+              nibh lorem. Duis sed odio lorem. In a efficitur leo. Ut venenatis
+              rhoncus.
+            </p>
+          </div>
+
+          <!-- Button -->
+          <div
+            class="col-lg-4 text-lg-end mt-4 mt-lg-0 wow animate__animated animate__fadeInLeft"
+            data-wow-duration="1s"
+            data-wow-delay="0.5s"
+          >
+            <a href="#" class="btn btn-light btn-lg rounded-pill px-5">
+              Get Started Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer pt-5 pb-3">
+      <div class="container">
+        <div class="row gy-5">
+          <!-- Logo -->
+          <div
+            class="col-lg-3 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.2s"
+          >
+            <img src="./img/logo-light.svg" alt="Logo" class="mb-4" />
+
+            <p class="text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div
+            class="col-md-6 col-lg-2 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.4s"
+          >
+            <h4 class="footer-title">Quick Links</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+
+              <li><a href="#">Product</a></li>
+
+              <li>
+                <a href="#">
+                  Careers
+                  <span class="badge ms-2"> Hiring </span>
+                </a>
+              </li>
+
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div
+            class="col-md-6 col-lg-2 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.6s"
+          >
+            <h4 class="footer-title">Services</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">Web Development</a></li>
+
+              <li><a href="#">Graphics Design</a></li>
+
+              <li><a href="#">Digital Marketing</a></li>
+
+              <li><a href="#">UI/UX Design</a></li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div
+            class="col-md-6 col-lg-2 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="0.8s"
+          >
+            <h4 class="footer-title">Support</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">Company</a></li>
+
+              <li><a href="#">Press Media</a></li>
+
+              <li><a href="#">Our Blog</a></li>
+
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div
+            class="col-md-6 col-lg-3 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
+            <h4 class="footer-title">Newsletter</h4>
+
+            <p class="text-secondary">Subscribe to receive future updates.</p>
+
+            <form>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Email address" />
+
+                <button type="submit">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <hr
+          class="my-5 wow animate__animated animate__fadeInDown"
+          data-wow-delay="1.2s"
+        />
+
+        <div class="row align-items-center">
+          <!-- Bottom Left -->
+          <div
+            class="col-md-6 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="1.4s"
+          >
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="#">English</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="#">Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bottom Right -->
+          <div
+            class="col-md-6 text-md-end mt-3 mt-md-0 wow animate__animated animate__fadeInDown"
+            data-wow-duration="1s"
+            data-wow-delay="1.6s"
+          >
+            © 2025 Base. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- back to top -->
+    <a href="#" class="backToTop cd-top text-replace js-cd-top">
+      <i class="fa fa-arrow-up"></i>
+    </a>
     <script>
       const videoModal = document.getElementById("videoModal");
       const youtubeVideo = document.getElementById("youtubeVideo");
@@ -577,6 +1557,24 @@
         }
       });
     </script>
+    <script>
+      const filters = document.querySelectorAll(".btn-check");
+      const items = document.querySelectorAll(".portfolio-item");
+      filters.forEach((filter) => {
+        filter.addEventListener("change", function () {
+          const category = this.dataset.filter;
+          items.forEach((item) => {
+            if (category === "all") {
+              item.classList.remove("hide");
+            } else if (item.classList.contains(category)) {
+              item.classList.remove("hide");
+            } else {
+              item.classList.add("hide");
+            }
+          });
+        });
+      });
+    </script>
     <!-- wow -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
@@ -593,5 +1591,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
