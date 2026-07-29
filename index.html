@@ -563,128 +563,194 @@
       </div>
     </div>
     <!-- PORTFOLIO -->
-    <section class="portfolio py-5">
-      <div class="container">
-        <!-- Heading -->
-        <div class="text-center mb-5">
-          <h2 class="title wow animate__animated animate__fadeInDown">
-            We Offer Great Affordable <br />
-            Premium Prices.
-          </h2>
-          <p class="text-secondary mt-3">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.
-          </p>
-        </div>
+<section class="portfolio py-5">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="title wow animate__animated animate__fadeInDown">
+        We Offer Great Affordable <br />
+        Premium Prices.
+      </h2>
 
-        <!-- Filter -->
-        <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
-          <input
-            type="radio"
-            class="btn-check"
-            name="portfolio"
-            id="all"
-            data-filter="all"
-            checked
-          />
-          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="all"
-            >All</label
-          >
+      <p class="text-secondary mt-3">
+        It is a long established fact that a reader will be distracted by
+        the readable content of a page when looking at its layout.
+      </p>
+    </div>
 
-          <input
-            type="radio"
-            class="btn-check"
-            name="portfolio"
-            id="branding"
-            data-filter="branding"
-          />
-          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="branding"
-            >Branding Strategy</label
-          >
+    <!-- Filter -->
+    <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+      <input
+        type="radio"
+        class="btn-check"
+        name="portfolio"
+        id="all"
+        data-filter="all"
+        checked
+      />
+      <label class="btn rounded-pill px-4 py-2 shadow-sm" for="all">
+        All
+      </label>
 
-          <input
-            type="radio"
-            class="btn-check"
-            name="portfolio"
-            id="digital"
-            data-filter="digital"
-          />
-          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="digital"
-            >Digital Experiences</label
-          >
+      <input
+        type="radio"
+        class="btn-check"
+        name="portfolio"
+        id="branding"
+        data-filter="branding"
+      />
+      <label class="btn rounded-pill px-4 py-2 shadow-sm" for="branding">
+        Branding Strategy
+      </label>
 
-          <input
-            type="radio"
-            class="btn-check"
-            name="portfolio"
-            id="ecommerce"
-            data-filter="ecommerce"
-          />
-          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="ecommerce"
-            >Ecommerce</label
-          >
-        </div>
+      <input
+        type="radio"
+        class="btn-check"
+        name="portfolio"
+        id="digital"
+        data-filter="digital"
+      />
+      <label class="btn rounded-pill px-4 py-2 shadow-sm" for="digital">
+        Digital Experiences
+      </label>
 
-        <!-- Portfolio Grid -->
+      <input
+        type="radio"
+        class="btn-check"
+        name="portfolio"
+        id="ecommerce"
+        data-filter="ecommerce"
+      />
+      <label class="btn rounded-pill px-4 py-2 shadow-sm" for="ecommerce">
+        Ecommerce
+      </label>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="row g-4">
+      <!-- Left Column -->
+      <div class="col-lg-8">
         <div class="row g-4">
-          <div class="col-lg-8">
-            <div class="row g-4">
-              <div class="col-md-6 portfolio-item branding ecommerce">
-                <img
-                  src="./img/project-01.png"
-                  class="img-fluid rounded-4 w-100"
-                  alt=""
-                />
-              </div>
+          <!-- Item 1 -->
+          <div class="col-md-6 portfolio-item branding ecommerce">
+            <div class="portfolio-card">
+              <img
+                src="./img/project-01.png"
+                class="img-fluid rounded-4 w-100"
+                alt="Project 1"
+              />
 
-              <div class="col-md-6 portfolio-item digital ecommerce">
-                <img
-                  src="./img/project-02.png"
-                  class="img-fluid rounded-4 w-100"
-                  alt=""
-                />
-              </div>
-
-              <div class="col-12 portfolio-item digital">
-                <img
-                  src="./img/project-03.png"
-                  class="img-fluid rounded-4 w-100"
-                  alt=""
-                />
+              <div class="portfolio-overlay">
+                <h4>Photo Retouching</h4>
+                <span>Branded Ecommerce</span>
+                <button
+                class="btn rounded-circle nav-btn"
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide="next"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 portfolio-item branding">
-            <img
-              src="./img/project-04.png"
-              class="img-fluid rounded-4 h-100 w-100 object-fit-cover"
-              alt=""
-            />
+          <!-- Item 2 -->
+          <div class="col-md-6 portfolio-item digital ecommerce">
+            <div class="portfolio-card">
+              <img
+                src="./img/project-02.png"
+                class="img-fluid rounded-4 w-100"
+                alt="Project 2"
+              />
+
+              <div class="portfolio-overlay">
+                <h4>Photo Retouching</h4>
+                <span>Branded Ecommerce</span>
+                <button
+                class="btn rounded-circle nav-btn"
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide="next"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-12 portfolio-item digital">
+            <div class="portfolio-card">
+              <img
+                src="./img/project-03.png"
+                class="img-fluid rounded-4 w-100"
+                alt="Project 3"
+              />
+
+              <div class="portfolio-overlay">
+                <h4>Photo Retouching</h4>
+                <span>Branded Ecommerce</span>
+                <button
+                class="btn rounded-circle nav-btn"
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide="next"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const filters = document.querySelectorAll('input[name="portfolio"]');
-        const items = document.querySelectorAll(".portfolio-item");
+      <!-- Right Column -->
+      <div class="col-lg-4 portfolio-item branding">
+        <div class="portfolio-card h-100">
+          <img
+            src="./img/project-04.png"
+            class="img-fluid rounded-4 h-100 w-100 object-fit-cover"
+            alt="Project 4"
+          />
 
-        filters.forEach((filter) => {
-          filter.addEventListener("change", () => {
-            const category = filter.dataset.filter;
+          <div class="portfolio-overlay">
+            <h4>Photo Retouching</h4>
+            <span>Branded Ecommerce</span>
+            <button
+                class="btn rounded-circle nav-btn"
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide="next"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+              </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            items.forEach((item) => {
-              item.style.display =
-                category === "all" || item.classList.contains(category)
-                  ? ""
-                  : "none";
-            });
-          });
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const filters = document.querySelectorAll('input[name="portfolio"]');
+    const items = document.querySelectorAll(".portfolio-item");
+
+    filters.forEach((filter) => {
+      filter.addEventListener("change", () => {
+        const category = filter.dataset.filter;
+
+        items.forEach((item) => {
+          item.style.display =
+            category === "all" || item.classList.contains(category)
+              ? ""
+              : "none";
         });
       });
-    </script>
+    });
+  });
+</script>
     <!-- TESTIMONIAL -->
     <section class="testimonial py-5">
       <div class="container">
