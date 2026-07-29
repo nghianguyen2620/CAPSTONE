@@ -72,7 +72,12 @@
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a
+                      class="nav-link"
+                      href="https://docs.google.com/spreadsheets/d/1JzNkXfFPi-MGtz2kfKZP7T5Yccc4518EtZhCqDnMDBs/edit?gid=0#gid=0"
+                      target="_blank"
+                      >Features</a
+                    >
                   </li>
                   <li class="nav-item dropdown">
                     <a
@@ -571,6 +576,7 @@
             We Offer Great Affordable <br />
             Premium Prices.
           </h2>
+
           <p class="text-secondary mt-3">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout.
@@ -587,9 +593,9 @@
             data-filter="all"
             checked
           />
-          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="all"
-            >All</label
-          >
+          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="all">
+            All
+          </label>
 
           <input
             type="radio"
@@ -598,9 +604,9 @@
             id="branding"
             data-filter="branding"
           />
-          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="branding"
-            >Branding Strategy</label
-          >
+          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="branding">
+            Branding Strategy
+          </label>
 
           <input
             type="radio"
@@ -609,9 +615,9 @@
             id="digital"
             data-filter="digital"
           />
-          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="digital"
-            >Digital Experiences</label
-          >
+          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="digital">
+            Digital Experiences
+          </label>
 
           <input
             type="radio"
@@ -620,47 +626,112 @@
             id="ecommerce"
             data-filter="ecommerce"
           />
-          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="ecommerce"
-            >Ecommerce</label
-          >
+          <label class="btn rounded-pill px-4 py-2 shadow-sm" for="ecommerce">
+            Ecommerce
+          </label>
         </div>
 
         <!-- Portfolio Grid -->
         <div class="row g-4">
+          <!-- Left Column -->
           <div class="col-lg-8">
             <div class="row g-4">
+              <!-- Item 1 -->
               <div class="col-md-6 portfolio-item branding ecommerce">
-                <img
-                  src="./img/project-01.png"
-                  class="img-fluid rounded-4 w-100"
-                  alt=""
-                />
+                <div class="portfolio-card">
+                  <img
+                    src="./img/project-01.png"
+                    class="img-fluid rounded-4 w-100"
+                    alt="Project 1"
+                  />
+
+                  <div class="portfolio-overlay">
+                    <h4>Photo Retouching</h4>
+                    <span>Branded Ecommerce</span>
+                    <button
+                      class="btn rounded-circle nav-btn"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="next"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
 
+              <!-- Item 2 -->
               <div class="col-md-6 portfolio-item digital ecommerce">
-                <img
-                  src="./img/project-02.png"
-                  class="img-fluid rounded-4 w-100"
-                  alt=""
-                />
+                <div class="portfolio-card">
+                  <img
+                    src="./img/project-02.png"
+                    class="img-fluid rounded-4 w-100"
+                    alt="Project 2"
+                  />
+
+                  <div class="portfolio-overlay">
+                    <h4>Photo Retouching</h4>
+                    <span>Branded Ecommerce</span>
+                    <button
+                      class="btn rounded-circle nav-btn"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="next"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
 
+              <!-- Item 3 -->
               <div class="col-12 portfolio-item digital">
-                <img
-                  src="./img/project-03.png"
-                  class="img-fluid rounded-4 w-100"
-                  alt=""
-                />
+                <div class="portfolio-card">
+                  <img
+                    src="./img/project-03.png"
+                    class="img-fluid rounded-4 w-100"
+                    alt="Project 3"
+                  />
+
+                  <div class="portfolio-overlay">
+                    <h4>Photo Retouching</h4>
+                    <span>Branded Ecommerce</span>
+                    <button
+                      class="btn rounded-circle nav-btn"
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="next"
+                    >
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
+          <!-- Right Column -->
           <div class="col-lg-4 portfolio-item branding">
-            <img
-              src="./img/project-04.png"
-              class="img-fluid rounded-4 h-100 w-100 object-fit-cover"
-              alt=""
-            />
+            <div class="portfolio-card h-100">
+              <img
+                src="./img/project-04.png"
+                class="img-fluid rounded-4 h-100 w-100 object-fit-cover"
+                alt="Project 4"
+              />
+
+              <div class="portfolio-overlay">
+                <h4>Photo Retouching</h4>
+                <span>Branded Ecommerce</span>
+                <button
+                  class="btn rounded-circle nav-btn"
+                  type="button"
+                  data-bs-target="#testimonialCarousel"
+                  data-bs-slide="next"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1409,8 +1480,7 @@
             data-wow-duration="1s"
             data-wow-delay="0.2s"
           >
-            <img src="./img/logo-light.svg" alt="Logo" class="mb-4" />
-
+            <img src="./img/logo-light.svg" id="logo" alt="Logo" class="mb-4" />
             <p class="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -1565,12 +1635,22 @@
     <script>
       let changeTheme = () => {
         document.querySelector("body").classList.toggle("dark");
+        document.querySelector("footer").classList.toggle("dark");
         if (document.body.classList.contains("dark")) {
           document.getElementById("theme-icon").classList.remove("la-sun");
           document.getElementById("theme-icon").classList.add("la-moon");
         } else {
           document.getElementById("theme-icon").classList.remove("la-moon");
           document.getElementById("theme-icon").classList.add("la-sun");
+        }
+        const icon = document.getElementById("theme-icon");
+        const logo = document.getElementById("logo");
+        if (document.body.classList.contains("dark")) {
+          icon.classList.replace("la-sun", "la-moon");
+          logo.src = "./img/logo-dark.svg";
+        } else {
+          icon.classList.replace("la-moon", "la-sun");
+          logo.src = "./img/logo-light.svg";
         }
       };
     </script>
