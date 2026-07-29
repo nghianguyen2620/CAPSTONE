@@ -4,26 +4,46 @@
 @import "theme/components";
 @import "theme/reset";
 
+:root {
+  --bg: #{$bg-light};
+  --bg-bold: #{$bg-light-bold};
+  --logo: url("./../img/logo-light.svg");
+  --text-heading: #{$text-heading-light};
+}
+body.dark {
+  --bg: #{$bg-dark};
+  --bg-bold: #{$bg-dark-bold};
+  --logo: url("./../img/logo-dark.svg");
+  --text-heading: #{$text-heading-dark};
+}
+
+body {
+  background-color: var(--bg);
+}
+
 .btn-general {
   @include styleBtn(#fff, #4e6bff, #fff, #4e6bff);
 }
 .title {
-  @include styleText($text-h2, $fw-h2, $text-heading-light);
+  @include styleText($text-h2, $fw-h2, var(--text-heading));
 }
 .title-h4 {
-  @include styleText($text-h4, $fw-h4, $text-heading-light);
+  @include styleText($text-h4, $fw-h4, var(--text-heading));
 }
 
 header {
   &.scrolled {
-    background-color: $bg-light;
+    background-color: var(--bg);
     border-bottom: 1px solid #cecbcb3d;
     .container .header-content .navbar .container-fluid .action {
-      a:nth-of-type(1),
-      a:nth-of-type(2) {
+      .theme-toggle-btn {
+        color: $text-primary;
+      }
+      .btn-SignIn {
         @include styleText($text-base, 500, $text-primary);
       }
       .btn-general {
+        color: #fff;
         background-color: #4e6bff;
       }
     }
@@ -32,6 +52,11 @@ header {
     .header-content {
       .navbar {
         .container-fluid {
+          .logo-light {
+            width: 130px;
+            height: 45px;
+            background-image: var(--logo);
+          }
           .navbar-toggler {
             .navbar-toggler-icon {
               transition: all 1s;
@@ -53,12 +78,22 @@ header {
                   &:hover,
                   &.active {
                     color: #4e6bff;
+                    background-color: var(--bg);
                   }
+                }
+                .dropdown-menu {
+                  background-color: var(--bg);
                 }
               }
             }
           }
           .action {
+            .theme-toggle-btn {
+              cursor: pointer;
+              font-size: 26px;
+              transition: all 0.3s ease;
+              color: #fff;
+            }
             a {
               @include styleText($text-base, 500, #fff);
             }
@@ -77,12 +112,15 @@ header {
   .container {
     .hero-content {
       h1 {
-        @include styleText(50px, 600, $text-heading-light);
+        @include styleText(50px, 600, var(--text-heading));
       }
       .action {
+        button {
+          padding: 13px 30px;
+        }
         p {
           span {
-            @include styleText(18px, 500, $text-heading-light);
+            @include styleText(18px, 500, var(--text-heading));
           }
         }
       }
@@ -195,7 +233,7 @@ header {
           }
         }
         span:nth-child(2) {
-          color: $text-heading-light;
+          color: var(--text-heading);
         }
       }
     }
@@ -212,7 +250,7 @@ header {
     left: 0;
     width: 100%;
     height: 566px;
-    background: #f4f7fa;
+    background-color: var(--bg-bold);
     z-index: -1;
   }
   .bg-team {
@@ -300,7 +338,7 @@ header {
             }
           }
           h4 {
-            @include styleText($text-h4, 400, $text-heading-light);
+            @include styleText($text-h4, 400, var(--text-heading));
           }
         }
       }
@@ -313,7 +351,7 @@ header {
   .service-item {
     transition: 0.5s;
     &:hover {
-      background-color: #fff;
+      background-color: var(--bg-bold);
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
     }
   }
@@ -328,8 +366,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 1000px;
-    background: #f4f7fa;
+    height: 1010px;
+    background: var(--bg-bold);
     z-index: -1;
   }
   .bg-team {
@@ -381,7 +419,7 @@ header {
     .bill {
       p {
         margin-bottom: 0;
-        color: $text-heading-light;
+        color: var(--text-heading);
       }
       .form-switch {
         .form-check-input,
@@ -398,21 +436,21 @@ header {
     .price-group {
       .price-item {
         padding: 20px 100px;
-        background-color: #fff;
+        background: var(--bg);
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
         border-radius: 10px;
         h4 {
-          @include styleText($text-h4, 400, $text-heading-light);
+          @include styleText($text-h4, 400, var(--text-heading));
         }
         .price-month {
           .year {
             display: none;
           }
           h2 {
-            @include styleText(40px, 600, $text-heading-light);
+            @include styleText(40px, 600, var(--text-heading));
           }
           p {
-            color: $text-heading-light;
+            color: var(--text-heading);
           }
         }
         button {
@@ -420,7 +458,7 @@ header {
           @include styleBtn(#fff, #f36a8d, #fff, #4e6bff);
         }
         p:last-child {
-          color: $text-heading-light;
+          color: var(--text-heading);
         }
       }
       .price-item:nth-child(2) button {
