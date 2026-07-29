@@ -38,6 +38,7 @@ body.dark {
   }
   .blog {
     background: #{$bg-dark};
+    color: #{$text-heading-dark};
     .card-title {
       &:hover {
         color: #4e6bff;
@@ -58,12 +59,12 @@ body.dark {
     z-index: 2;
     .btn {
       background-color: #4e6bff;
-      color: $text-primary;
+      color: #fff;
       padding: 12px 30px;
       border-radius: 50px;
       &:hover {
         background-color: #f36a8d;
-        color: $text-primary;
+        color: #fff;
       }
     }
   }
@@ -573,12 +574,12 @@ header {
 .portfolio-overlay {
   position: absolute;
   inset: 0;
-  background: #fff;
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  backdrop-filter: blur(10px); 
   transform: translateY(100%);
   transition: 0.45s ease;
   z-index: 2;
@@ -593,22 +594,21 @@ header {
     font-size: 1.1rem;
     margin-bottom: 2rem;
   }
-}
-.overlay-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #4e6bff;
-  color: $text-primary;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  transition: 0.3s;
-  &:hover {
-    background: #3454ff;
-    color: $text-primary;
-    transform: translateY(-3px);
+  .btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #4e6bff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover {
+      background: #3454ff;
+      color: #fff;
+    }
   }
 }
 .btn-check {
@@ -630,14 +630,14 @@ header {
     + {
       .btn {
         background: #4e6bff;
-        color: $text-primary;
+        color: #fff;
         border-color: #4e6bff;
         box-shadow: 0 0.5rem 1rem rgba(78, 107, 255, 0.35);
       }
       .btn.btn-light {
         background-color: #4e6bff !important;
         border-color: #4e6bff !important;
-        color: $color_2 !important;
+        color: #fff !important;
       }
     }
   }
@@ -753,7 +753,7 @@ header {
 }
 .blog {
   background: #fff;
-  .card-title {
+    .card-title {
     &:hover {
       color: #4e6bff;
     }
@@ -793,12 +793,12 @@ header {
   z-index: 2;
   .btn {
     background-color: #4e6bff;
-    color: $text-primary;
+    color: #fff;
     padding: 12px 30px;
     border-radius: 50px;
     &:hover {
       background-color: #f36a8d;
-      color: $text-primary;
+      color: #fff;
     }
   }
 }
@@ -852,7 +852,7 @@ header {
   text-decoration: none;
   &:hover {
     background: #0d6efd;
-    color: $text-primary;
+    color: #fff;
   }
 }
 .cta {
@@ -968,7 +968,7 @@ header {
   }
 }
 .badge {
-  color: $text-primary;
+  color: #fff;
   background-color: #20ca66;
 }
 
