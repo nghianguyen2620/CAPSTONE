@@ -15,6 +15,81 @@ body.dark {
   --bg-bold: #{$bg-dark-bold};
   --logo: url("./../img/logo-dark.svg");
   --text-heading: #{$text-heading-dark};
+  .card {
+    background-color: #{$bg-dark};
+    color: #{$text-heading-dark};
+  }
+  .form-control {
+    background-color: #{$bg-dark};
+    color: #{$text-heading-dark};
+    border-color: #444;
+
+    &::placeholder {
+      color: #aaa;
+    }
+
+    &:focus {
+      background-color: #{$bg-dark};
+      color: #{$text-heading-dark};
+      border-color: #4e6bff;
+      box-shadow: none;
+    }
+    
+  }
+  .blog {
+    background: #{$bg-dark};
+    .card-title {
+      &:hover {
+        color: #4e6bff;
+      }
+    }
+}
+  .blog-overlay {
+    position: absolute;
+    inset: 0;
+    background: #{$bg-dark};
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.6s ease;
+    z-index: 2;
+    .btn {
+      background-color: #4e6bff;
+      color: $text-primary;
+      padding: 12px 30px;
+      border-radius: 50px;
+      &:hover {
+        background-color: #f36a8d;
+        color: $text-primary;
+      }
+    }
+  }
+  .counter {
+    background: #{$bg-dark};
+  }
+  .counter-number {
+    color: #{$text-heading-dark};
+    font-weight: 700;
+  }
+  .brands {
+    background: #{$bg-dark};
+  }
+  .testimonial {
+    background: #{$bg-dark};
+    h4 {
+      color: #181c31;
+      font-weight: 500;
+    }
+    .nav-btn {
+      color: #{$text-heading-dark};
+    }
+    .nav-btn:hover {
+      color: #{$text-primary};
+    }
+  }
 }
 
 body {
@@ -475,7 +550,7 @@ header {
   font-size: 16px;
 }
 .lc {
-  color: $color_8;
+  color: rgb(121 128 138);
 }
 .portfolio-item {
   position: relative;
@@ -510,11 +585,11 @@ header {
   h3 {
     font-size: 2rem;
     font-weight: 600;
-    color: $color_3;
+    color: #181c31;
     margin-bottom: 0.5rem;
   }
   p {
-    color: $color_1;
+    color: $text-primary;
     font-size: 1.1rem;
     margin-bottom: 2rem;
   }
@@ -524,7 +599,7 @@ header {
   height: 60px;
   border-radius: 50%;
   background: #4e6bff;
-  color: $color_2;
+  color: $text-primary;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -532,22 +607,22 @@ header {
   transition: 0.3s;
   &:hover {
     background: #3454ff;
-    color: $color_2;
+    color: $text-primary;
     transform: translateY(-3px);
   }
 }
 .btn-check {
-  background-color: $background-color_2;
+  background-color: #fff;
   + {
     .btn {
-      color: $color_10;
+      color: #6b7280;
       border: 1px solid #e9ecef;
       border-radius: 50px;
       padding: 10px 24px;
       transition: all 0.3s;
       &:hover {
         transform: translateY(-2px);
-        border-color: $border-color_1;
+        border-color: #4e6bff;
       }
     }
   }
@@ -555,13 +630,13 @@ header {
     + {
       .btn {
         background: #4e6bff;
-        color: $color_2;
-        border-color: $border-color_1;
+        color: $text-primary;
+        border-color: #4e6bff;
         box-shadow: 0 0.5rem 1rem rgba(78, 107, 255, 0.35);
       }
       .btn.btn-light {
-        background-color: $background-color_1 !important;
-        border-color: $border-color_1 !important;
+        background-color: #4e6bff !important;
+        border-color: #4e6bff !important;
         color: $color_2 !important;
       }
     }
@@ -570,7 +645,7 @@ header {
 .testimonial {
   background: #fff;
   h4 {
-    color: $color_3;
+    color: #181c31;
     font-weight: 500;
   }
 }
@@ -589,7 +664,7 @@ header {
   font-size: 2rem;
   line-height: 1.5;
   font-style: italic;
-  color: $color_1;
+  color: $text-primary;
 }
 .bar-blue {
   position: absolute;
@@ -617,7 +692,7 @@ header {
   border-radius: 50%;
   transition: all 0.3s ease;
   &:hover {
-    border-color: $border-color_2;
+    border-color: #0d6efd;
   }
 }
 .counter {
@@ -662,7 +737,7 @@ header {
   }
 }
 .counter-number {
-  color: $color_11;
+  color: #1f2937;
   font-weight: 700;
 }
 .brands {
@@ -680,7 +755,7 @@ header {
   background: #fff;
   .card-title {
     &:hover {
-      color: $color_4;
+      color: #4e6bff;
     }
   }
 }
@@ -717,13 +792,13 @@ header {
   transition: all 0.6s ease;
   z-index: 2;
   .btn {
-    background-color: $background-color_1;
-    color: $color_2;
+    background-color: #4e6bff;
+    color: $text-primary;
     padding: 12px 30px;
     border-radius: 50px;
     &:hover {
-      background-color: $background-color_4;
-      color: $color_2;
+      background-color: #f36a8d;
+      color: $text-primary;
     }
   }
 }
@@ -772,12 +847,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $color_12;
+  color: #000;
   transition: 0.3s;
   text-decoration: none;
   &:hover {
     background: #0d6efd;
-    color: $color_2;
+    color: $text-primary;
   }
 }
 .cta {
@@ -795,18 +870,18 @@ header {
   }
 }
 .footer {
-  background: #fff;
+  background: var(--bg, #fff);
   ul {
     li {
       margin-bottom: 12px;
     }
   }
   a {
-    color: $color_13;
+    color: #6c757d;
     text-decoration: none;
     transition: 0.3s;
     &:hover {
-      color: $color_14;
+      color: #0d6efd;
     }
   }
   .form-control {
@@ -814,7 +889,7 @@ header {
   }
 }
 .footer-title {
-  color: $color_12;
+  color: #000;
   font-size: 22px;
   margin-bottom: 25px;
 }
@@ -836,7 +911,7 @@ header {
     font-size: 16px;
     background: transparent;
     &::placeholder {
-      color: $color_9;
+      color: #9ca3af;;
     }
   }
   button {
@@ -845,22 +920,56 @@ header {
     border: none;
     border-radius: 50%;
     background: #fff;
-    color: $color_13;
+    color: #6c757d;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
     &:hover {
-      color: $color_4;
+      color: #4e6bff;
     }
     i {
       font-size: 18px;
     }
   }
 }
+.footer.dark {
+  background: $bg-dark;
+  color: $text-heading-dark;
+  --logo: url("./../img/logo-dark.svg");
+  .footer-title {
+    color: $text-heading-dark;
+  }
+
+  a {
+    color: $text-heading-dark;
+
+    &:hover {
+      color: #0d6efd;
+    }
+  }
+
+  .newsletter-form {
+    background: $bg-dark-bold;
+    border-color: rgba(255, 255, 255, 0.2);
+
+    input {
+      color: white;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    button {
+      background: $bg-dark-bold;
+      color: white;
+    }
+  }
+}
 .badge {
-  color: $color_2;
-  background-color: $background-color_5;
+  color: $text-primary;
+  background-color: #20ca66;
 }
 
 .backToTop {

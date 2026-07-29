@@ -1409,8 +1409,7 @@
             data-wow-duration="1s"
             data-wow-delay="0.2s"
           >
-            <img src="./img/logo-light.svg" alt="Logo" class="mb-4" />
-
+            <img src="./img/logo-light.svg" id="logo" alt="Logo" class="mb-4" />
             <p class="text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -1565,12 +1564,22 @@
     <script>
       let changeTheme = () => {
         document.querySelector("body").classList.toggle("dark");
+        document.querySelector("footer").classList.toggle("dark");
         if (document.body.classList.contains("dark")) {
           document.getElementById("theme-icon").classList.remove("la-sun");
           document.getElementById("theme-icon").classList.add("la-moon");
         } else {
           document.getElementById("theme-icon").classList.remove("la-moon");
           document.getElementById("theme-icon").classList.add("la-sun");
+        }
+        const icon = document.getElementById("theme-icon");
+        const logo = document.getElementById("logo");
+        if (document.body.classList.contains("dark")) {
+          icon.classList.replace("la-sun", "la-moon");
+          logo.src = "./img/logo-dark.svg";
+        } else {
+          icon.classList.replace("la-moon", "la-sun");
+          logo.src = "./img/logo-light.svg";
         }
       };
     </script>
